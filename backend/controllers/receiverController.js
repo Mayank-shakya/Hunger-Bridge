@@ -5,7 +5,7 @@ import Receiver from "../models/receiverModel.js";
 
 export const getTotalRequests = async (req, res) => {
   try {
-    const receiverId = req.user.id; // assuming auth middleware sets req.user
+    const receiverId = req.user.id; 
 
     const totalRequests = await Pickup.countDocuments({ receiver: receiverId });
 
