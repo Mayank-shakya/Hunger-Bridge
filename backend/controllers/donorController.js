@@ -8,7 +8,7 @@ dotenv.config();
 
 export const editDonorProfile = async (req, res) => {
   try {
-    const { id } = req.user; // Only need ID
+    const { id } = req.user; 
     const donor = await Donor.findById(id);
 
     if (!donor) {
